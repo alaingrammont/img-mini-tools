@@ -1,4 +1,6 @@
 # Encabezado 1 (el más grande)
+
+
 ## Encabezado 2
 ### Encabezado 3
 #### Encabezado 4
@@ -24,8 +26,12 @@
 [Texto del enlace](https://ejemplo.com)
 ![Texto alternativo de imagen](ruta/a/imagen.png)
 
+## RELEASE FILES
 
-| Columna 1 | Columna 2 | Columna 3 |
-|-----------|-----------|-----------|
-| Dato 1    | Dato 2    | Dato 3    |
-| Dato 4    | Dato 5    | Dato 6    |
+#### Recommended
+
+File|Description
+:---|:---
+Dato 4|Dato 5|
+Dato 1|Dato 2|
+Dato 4|Dato 5|
