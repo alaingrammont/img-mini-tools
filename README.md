@@ -29,20 +29,20 @@
 
 ## Examples
 
-´´´bash
+```bash
 	# how to change the image extension 
 	img-mini-tools image.jpg image.png
-´´´
+```
 
-´´´bash
+```bash
 	# resize an image
 	img-mini-tools image.jpg image_resized.jpg --re-size 100 100
-´´´
+```
 
-´´´bash
+```bash
 	# resize an image with an aspect ratio
 	img-mini-tools image.jpg image_resized.jpg --aspect-ratio 3:2
-´´´
+```
 
 ## RELEASE FILES
 
