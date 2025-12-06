@@ -3,15 +3,44 @@ from pathlib import Path
 from dataclasses import dataclass, field
 from PIL import Image
 
+# Positional Arguments ============================================//
 parser = argparse.ArgumentParser()
-parser.add_argument("image_input", type=Path, help="path of the image to be analyzed") #ready
-parser.add_argument("image_output", type=Path, help="path of the analyzed image") #ready
-parser.add_argument("--re-write", action="store_true", help="Rewrite the output image if it exists") #ready
-parser.add_argument("-c","--crop", action="store_true", help="Returns a minimum rectangle containing all pixels whose alpha > 0") #ready
-parser.add_argument("-s","--re-size", type=int,nargs=2, metavar=('WIDTH', 'HEIGHT'),help="resize the image to the specified dimensions") #ready
-parser.add_argument("-a","--aspect-ratio", type=str, metavar="WIDTH:HEIGHT", help="Resize de the image to a specific aspect ratio without distorting it.")#ready
+parser.add_argument("image_input", 
+	type= Path, 
+	help= "path of the image to be analyzed"
+)
+
+parser.add_argument("image_output",
+	type= Path,
+	help= "path of the analyzed image"
+)
+
+# Optionals Arguments =============================================// 
+parser.add_argument("--re-write",
+	action= "store_true",
+	help= "Rewrite the output image if it exists"
+)
+
+parser.add_argument("--crop",
+	action= "store_true",
+	help= "Returns a minimum rectangle containing all pixels whose alpha > 0"
+) 
+
+parser.add_argument("--re-size",
+	type= int,	nargs= 2,
+	metavar= ('WIDTH','HEIGHT'),
+	help= "resize the image to the specified dimensions"
+) 
+
+parser.add_argument("--aspect-ratio",
+	type= str,
+	metavar= "WIDTH:HEIGHT",
+	help= "Resize de the image to a specific aspect ratio without distorting it."
+)
 args = parser.parse_args()
 
+
+# Positional Arguments Validation =================================// 
 if not args.image_input.exists():
 	raise FileNotFoundError(f"File not found: {args.image_input}")
 
@@ -30,6 +59,8 @@ if not args.image_output.suffix in extensions:
 		f"	Supported Extensions: {extensions}"
 	)
 
+
+# Application Code ================================================//
 img = Image.open(args.image_input)
 
 if args.crop:

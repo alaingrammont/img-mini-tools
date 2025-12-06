@@ -27,8 +27,12 @@
 ![Texto alternativo de imagen](ruta/a/imagen.png)
 
 
-## Examples
 
+
+# img-mini-tools
+img-mini-tools is a lightweight CLI tool for performing simple image edits
+
+## Examples
 ```bash
 	# how to change the image extension 
 	img-mini-tools image.jpg image.png
