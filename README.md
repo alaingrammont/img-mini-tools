@@ -26,12 +26,29 @@
 [Texto del enlace](https://ejemplo.com)
 ![Texto alternativo de imagen](ruta/a/imagen.png)
 
+
+## Examples
+
+´´´bash
+	# how to change the image extension 
+	img-mini-tools image.jpg image.png
+´´´
+
+´´´bash
+	# resize an image
+	img-mini-tools image.jpg image_resized.jpg --re-size 100 100
+´´´
+
+´´´bash
+	# resize an image with an aspect ratio
+	img-mini-tools image.jpg image_resized.jpg --aspect-ratio 3:2
+´´´
+
 ## RELEASE FILES
 
 #### Recommended
 
 File|Description
 :---|:---
-Dato 4|Dato 5|
-Dato 1|Dato 2|
-Dato 4|Dato 5|
+[img-mini-tools]()|LINUX executable|
+[img-mini-tools.exe]()|Windows executable|
